@@ -1,0 +1,28 @@
+{
+  "name": "espect",
+  "version": "0.0.0",
+  "description": "Traverses a program and statically tracks state",
+  "main": "index.js",
+  "scripts": {
+    "validate": "npm ls",
+    "test": "./node_modules/lab/bin/lab -a code -Lvf"
+  },
+  "author": "Caleb Hoover",
+  "license": "ISC",
+  "engines": {
+    "node": "4.x"
+  },
+  "devDependencies": {
+    "code": "^2.0.1",
+    "git-validate": "^2.1.0",
+    "lab": "^7.3.0"
+  },
+  "dependencies": {
+    "chalk": "^1.1.1",
+    "escodegen": "^1.7.0",
+    "escope": "^3.2.0",
+    "espree": "^2.2.5",
+    "lodash": "^3.10.1",
+    "resolve": "^1.1.6"
+  }
+}
