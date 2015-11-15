@@ -139,7 +139,7 @@ describe('traverse', function () {
 	});
 });
 
-describe('Funcitonality', function () {
+describe('Functionality', function () {
 	it('Loads from another file', function (done) {
 		const program = `var test = require('../test/lib/testFile.js');`;
 		let tree = traverse(program);
@@ -154,6 +154,19 @@ describe('Funcitonality', function () {
 		let tree = traverse(program);
 
 		expect(tree.body[2].expression).to.objMatch(ast.l(3));
+
+		done();
+	});
+
+	it('#IfStatement', function (done) {
+		const program = `var a = 2;\nif (a === 3) {\na = 3;\n} else {\na = 4;\n}`;
+		let nodes = 0;
+		let tree =  expressions.traverse(program, options, options.file, function (scope, node) {
+			expect(node).to.exist();
+			nodes++;
+		});
+
+		expect(nodes).to.equal(24);
 
 		done();
 	});

@@ -9,6 +9,7 @@
   },
   "author": "Caleb Hoover",
   "license": "ISC",
+  "repository": "coder13/espect",
   "engines": {
     "node": "4.x"
   },
@@ -16,7 +17,7 @@
     "code": "^2.0.1",
     "git-validate": "^2.1.0",
     "lab": "^7.3.0"
-  },
+    },
   "dependencies": {
     "chalk": "^1.1.1",
     "escodegen": "^1.7.0",
@@ -24,5 +25,9 @@
     "espree": "^2.2.5",
     "lodash": "^3.10.1",
     "resolve": "^1.1.6"
-  }
+  },
+  "pre-commit": [
+    "validate",
+    "test"
+  ]
 }
