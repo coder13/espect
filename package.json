@@ -1,6 +1,6 @@
 {
   "name": "espect",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Traverses a program and statically tracks state",
   "main": "index.js",
   "scripts": {
