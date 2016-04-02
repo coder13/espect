@@ -8,10 +8,10 @@ const it = lab.it;
 const code = require('code');
 const expect = code.expect;
 
-/* Because there is no simple way to add a method to code. */
+/* Because there is no simple way to add a method to Code. */
 let t = expect(2);
 t.__proto__.objMatch = function (value) {
-	return this.__proto__.assert.call(this, utils.matches(this._ref, value), 'match');
+	return this.__proto__.assert.call(this, ast.matches(this._ref, value), 'match');
 };
 t.to.equal(2);
 
